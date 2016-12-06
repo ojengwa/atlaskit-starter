@@ -13,7 +13,7 @@
   "author": "Atlassian",
   "license": "ISC",
   "dependencies": {
-    "ak-button": "^5.0.0",
+    "ak-button": "^5.0.1",
     "ak-css-reset": "^1.3.0",
     "ak-icon": "^11.2.2",
     "ak-modal-dialog": "^1.2.0",
