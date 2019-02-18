@@ -196,16 +196,7 @@
     babel-runtime "^6.26.0"
     uuid "^3.1.0"
 
-"@atlaskit/icon@^13.4.0":
-  version "13.9.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-13.9.0.tgz#6347e1f337c444e34ed6a2a371adf5c4100bcf0a"
-  integrity sha512-fITH6V+0HD6uLVHOIbZM6xKFn64+qAmYkITJh6oy6o8VOWPhkxdIH2RiihXJLmdEal91+UNdt6WqZvvKVUTxLQ==
-  dependencies:
-    "@atlaskit/theme" "^6.0.2"
-    babel-runtime "^6.26.0"
-    uuid "^3.1.0"
-
-"@atlaskit/icon@^16.0.0":
+"@atlaskit/icon@^16.0.0", "@atlaskit/icon@^16.0.2":
   version "16.0.2"
   resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-16.0.2.tgz#c60b1f9c458c1e5eb189f97039d2aedcb2717c34"
   integrity sha512-7+4KtLkpedYghgs+jV3IoWhtnvtQQorT3Vc1dkZJyDUJ3t3LwDnTYP2SnJ8uZIlnQZRQ4pm5R7m2FFrpTwvSwQ==
@@ -403,14 +394,6 @@
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-6.0.1.tgz#1fa4e1f46aebf815535a91eb01eefee175d5edb6"
   dependencies:
-    prop-types "^15.5.10"
-
-"@atlaskit/theme@^6.0.2":
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-6.2.1.tgz#2d84a5b8dbd05c5d94064c0ab29e6f6a2f1ff415"
-  integrity sha512-6u0OxpnZ2n+G7Wc1wckgtOEiYl3wmJ2HvBd28N7d+Fi/fbi+C4TzfBvyeENUqtrp1UIEhweVbB2WLoVoKA5c/w==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
     prop-types "^15.5.10"
 
 "@atlaskit/theme@^7.0.1":
