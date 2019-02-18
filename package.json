@@ -20,6 +20,7 @@
     "@atlaskit/flag": "^9.0.7",
     "@atlaskit/icon": "^13.4.0",
     "@atlaskit/inline-edit": "^7.0.7",
+    "@atlaskit/logo": "^9.2.7",
     "@atlaskit/modal-dialog": "^6.0.10",
     "@atlaskit/navigation": "^33.1.7",
     "@atlaskit/page": "^8.0.12",

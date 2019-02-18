@@ -11,7 +11,7 @@ import DashboardIcon from '@atlaskit/icon/glyph/dashboard';
 import GearIcon from '@atlaskit/icon/glyph/settings';
 import SearchIcon from '@atlaskit/icon/glyph/search';
 import CreateIcon from '@atlaskit/icon/glyph/add';
-import AtlassianIcon from '@atlaskit/icon/glyph/atlassian';
+import { AtlassianIcon } from '@atlaskit/logo';
 import ArrowleftIcon from '@atlaskit/icon/glyph/arrow-left';
 
 import CreateDrawer from '../components/CreateDrawer';
