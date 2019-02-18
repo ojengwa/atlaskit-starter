@@ -56,10 +56,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Page
-          navigationWidth={this.context.navOpenState.width}
-          navigation={<StarterNavigation />}
-        >
+        <Page navigation={<StarterNavigation />}>
           {this.props.children}
         </Page>
         <div>
