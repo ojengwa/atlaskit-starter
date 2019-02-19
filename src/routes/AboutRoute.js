@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React from 'react';
 import { useEffect } from 'react';
 import { withNavigationViewController } from '@atlaskit/navigation-next';
 
@@ -11,7 +10,7 @@ export default withNavigationViewController(function AboutRouteBase(props) {
     navigationViewController.setView(productHomeView.id);
   }, []);
   return (
-    <div css={{ padding: 30 }}>
+    <div styles={{ padding: 30 }}>
       <h1>About</h1>
     </div>
   );

@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React from 'react';
 import FolderIcon from '@atlaskit/icon/glyph/folder';
 import PortfolioIcon from '@atlaskit/icon/glyph/portfolio';
 import DashboardIcon from '@atlaskit/icon/glyph/dashboard';
@@ -7,9 +6,9 @@ import LinkItem from '../components/LinkItem';
 
 function CustomProductWordmark() {
   return (
-    <div css={{ padding: '0 0 26px 16px' }}>
+    <div styles={{ padding: '0 0 26px 16px' }}>
       <span
-        css={{
+        styles={{
           color: 'inherit',
           fontFamily: 'Charlie_Display_Regular',
           fontSize: 32,

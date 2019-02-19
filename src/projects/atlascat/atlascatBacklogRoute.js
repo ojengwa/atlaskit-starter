@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React from 'react';
 import { useEffect } from 'react';
 import { withNavigationViewController } from '@atlaskit/navigation-next';
 import atlascatHomeView from './atlascatHomeView';
@@ -15,7 +14,7 @@ export default withNavigationViewController(function AtlascatBacklogRouteBase(
   }, []);
   return (
     <Page>
-      <div css={{ padding: 30 }}>
+      <div styles={{ padding: 30 }}>
         <h2>Atlascat Backlog</h2>
 
         <p>
