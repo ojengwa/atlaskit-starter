@@ -23,7 +23,7 @@ export default function StarterGlobalNav() {
   return (
     <GlobalNavigation
       productIcon={AtlaskitLogo}
-      productHref="#"
+      productHref="/"
       onProductClick={() => console.log('product clicked')}
       onCreateClick={() => console.log('create clicked')}
       onSearchClick={() => console.log('search clicked')}

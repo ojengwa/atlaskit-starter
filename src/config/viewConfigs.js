@@ -2,6 +2,8 @@
 import { jsx } from '@emotion/core';
 import FolderIcon from '@atlaskit/icon/glyph/folder';
 import PortfolioIcon from '@atlaskit/icon/glyph/portfolio';
+import DashboardIcon from '@atlaskit/icon/glyph/dashboard';
+import LinkItem from '../components/LinkItem';
 
 function CustomProductWordmark() {
   return (
@@ -45,6 +47,14 @@ export const productHomeView = {
       nestedGroupKey: 'menu',
       items: [
         {
+          type: 'InlineComponent',
+          id: 'about',
+          component: LinkItem,
+          before: DashboardIcon,
+          text: 'About',
+          to: '/'
+        },
+        {
           type: 'Item',
           id: 'projects',
           before: FolderIcon,
@@ -52,9 +62,11 @@ export const productHomeView = {
           goTo: 'product/projects'
         },
         {
-          type: 'Item',
+          // Example using RoutedLinkItem as a custom component type
+          type: 'RoutedLinkItem',
           id: 'portfolio',
           before: PortfolioIcon,
+          to: '/portfolio',
           text: 'Portfolio'
         }
       ]
@@ -95,7 +107,13 @@ export const productProjectsView = {
           text: 'Available Projects',
           id: 'available-projects-heading'
         },
-        { type: 'Item', text: 'Atlascat', id: 'atlascat' }
+        // @TODO: generate these dynamically
+        {
+          type: 'RoutedLinkItem',
+          text: 'Atlascat',
+          id: 'atlascat',
+          to: '/projects/atlascat'
+        }
       ]
     }
   ]

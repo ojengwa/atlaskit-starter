@@ -4,12 +4,17 @@ import {
   NavigationProvider,
   withNavigationViewController
 } from '@atlaskit/navigation-next';
-import { productHomeView, productProjectsView } from '../config/viewConfigs';
-import StarterGlobalNav from '../components/StarterGlobalNav';
+import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import { css, Global } from '@emotion/core';
+
+import { productHomeView, productProjectsView } from '../config/viewConfigs';
+import { atlascatHomeView } from '../projects/atlascat';
+import StarterGlobalNav from '../components/StarterGlobalNav';
+import LinkItem from '../components/LinkItem';
 
 /* eslint-disable-next-line */
 import cssReset from '@atlaskit/css-reset';
+import { AboutRoute, ProjectsRoute } from '../routes';
 
 const globalStyles = css`
   @font-face {
@@ -33,17 +38,23 @@ function App(props) {
   useEffect(() => {
     const { navigationViewController } = props;
     navigationViewController.addView(productHomeView);
+    navigationViewController.addView(atlascatHomeView);
     navigationViewController.addView(productProjectsView);
-    navigationViewController.setView(productHomeView.id);
   }, []);
 
   return (
     <LayoutManagerWithViewController
+      customComponents={{ RoutedLinkItem: LinkItem }}
       globalNavigation={StarterGlobalNav}
       // productNavigation={() => null}
       // containerNavigation={() => null}
     >
-      <div css={{ padding: '32px 40px' }}>Page content goes here.</div>
+      <Switch>
+        <Route exact path="/" component={AboutRoute} />
+        <Route path="/projects/:projectID" component={ProjectsRoute} />
+        <Route path="/projects" component={ProjectsRoute} />
+        <Route path="/portfolio" component={() => <div>Portfolio</div>} />
+      </Switch>
     </LayoutManagerWithViewController>
   );
 }
@@ -52,9 +63,11 @@ const AppWithNavigationViewController = withNavigationViewController(App);
 
 export default function() {
   return (
-    <NavigationProvider>
-      <Global styles={globalStyles} />
-      <AppWithNavigationViewController />
-    </NavigationProvider>
+    <BrowserRouter>
+      <NavigationProvider>
+        <Global styles={globalStyles} />
+        <AppWithNavigationViewController />
+      </NavigationProvider>
+    </BrowserRouter>
   );
 }
