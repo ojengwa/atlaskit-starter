@@ -1,23 +1,11 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React from 'react';
 import GlobalNavigation from '@atlaskit/global-navigation';
 import AppSwitcherIcon from '@atlaskit/icon/glyph/app-switcher';
-import ataskitIcon from '../images/atlaskit-logo-inverted.png';
+import ataskitIcon from '../assets/images/atlaskit-logo-inverted.png';
 import { GlobalItem } from '@atlaskit/navigation-next';
 
-const logoStyles = {
-  img: {
-    width: 24,
-    height: 24
-  }
-};
-
 function AtlaskitLogo() {
-  return (
-    <div css={[logoStyles]}>
-      <img src={ataskitIcon} alt="" />
-    </div>
-  );
+  return <img width="24" src={ataskitIcon} alt="" />;
 }
 
 function AppSwitcherComponent(props) {
@@ -25,13 +13,13 @@ function AppSwitcherComponent(props) {
     <GlobalItem
       {...props}
       icon={AppSwitcherIcon}
-      id="test"
+      id="app-switcher"
       onClick={() => console.log('AppSwitcher clicked')}
     />
   );
 }
 
-export default function GlobalNav() {
+export default function StarterGlobalNav() {
   return (
     <GlobalNavigation
       productIcon={AtlaskitLogo}
