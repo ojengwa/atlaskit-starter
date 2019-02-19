@@ -1,6 +1,10 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React from 'react';
+import styled from '@emotion/styled';
+
+const Wrapper = styled.div`
+  color: pink;
+`;
 
 export default function atlascatPageContent() {
-  return <div>Atlascat Page</div>;
+  return <Wrapper>Atlascat Page</Wrapper>;
 }

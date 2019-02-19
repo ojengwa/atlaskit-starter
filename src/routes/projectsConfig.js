@@ -5,6 +5,7 @@ import {
 
 const projectsConfig = {
   atlascat: {
+    id: 'atlascat/home',
     component: atlascatPageContent(),
     routeBase: atlascatBacklogRoute()
   }

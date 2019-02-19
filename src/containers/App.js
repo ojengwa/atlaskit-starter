@@ -8,7 +8,7 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import { css, Global } from '@emotion/core';
 
 import { productHomeView, productProjectsView } from '../config/viewConfigs';
-import { atlascatHomeView } from '../projects/atlascat';
+import { atlascatHomeView, atlascatBacklogRoute } from '../projects/atlascat';
 import StarterGlobalNav from '../components/StarterGlobalNav';
 import LinkItem from '../components/LinkItem';
 
@@ -51,6 +51,7 @@ function App(props) {
     >
       <Switch>
         <Route exact path="/" component={AboutRoute} />
+        {/* <Route path="/projects/atlascat" component={atlascatBacklogRoute} /> */}
         <Route path="/projects/:projectID" component={ProjectsRoute} />
         <Route path="/projects" component={ProjectsRoute} />
         <Route path="/portfolio" component={() => <div>Portfolio</div>} />
