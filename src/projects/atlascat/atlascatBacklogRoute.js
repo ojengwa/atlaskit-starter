@@ -1,15 +1,14 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { withNavigationViewController } from '@atlaskit/navigation-next';
-import atlascatHomeView from './atlascatHomeView';
 import Page from '@atlaskit/page';
 import { Link } from 'react-router-dom';
+import atlascatHomeView from './viewConfigs';
 
-export default withNavigationViewController(function AtlascatBacklogRouteBase(
-  props
-) {
+function AtlascatBacklogRouteBase(props) {
   useEffect(() => {
     const { navigationViewController } = props;
+    navigationViewController.addView(atlascatHomeView);
     navigationViewController.setView(atlascatHomeView.id);
   }, []);
   return (
@@ -18,9 +17,11 @@ export default withNavigationViewController(function AtlascatBacklogRouteBase(
         <h2>Atlascat Backlog</h2>
 
         <p>
-          <Link to="/">Back to About</Link>
+          <Link to="/projects">Back to Projects</Link>
         </p>
       </div>
     </Page>
   );
-});
+}
+
+export default withNavigationViewController(AtlascatBacklogRouteBase);

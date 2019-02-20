@@ -54,11 +54,11 @@ export const productHomeView = {
           to: '/'
         },
         {
-          type: 'Item',
+          type: 'RoutedLinkItem',
           id: 'projects',
           before: FolderIcon,
           text: 'Projects',
-          goTo: 'product/projects'
+          to: '/projects'
         },
         {
           // Example using RoutedLinkItem as a custom component type
@@ -67,51 +67,6 @@ export const productHomeView = {
           before: PortfolioIcon,
           to: '/portfolio',
           text: 'Portfolio'
-        }
-      ]
-    }
-  ]
-};
-
-export const productProjectsView = {
-  id: 'product/projects',
-  type: 'product',
-  getItems: () => [
-    {
-      type: 'HeaderSection',
-      id: 'product/projects:header',
-      items: [
-        {
-          type: 'InlineComponent',
-          component: CustomProductWordmark,
-          id: 'custom-product-wordmark'
-        },
-        {
-          type: 'BackItem',
-          id: 'back-item',
-          goTo: 'product/home',
-          text: 'Back to Atlaskit'
-        }
-      ]
-    },
-    {
-      type: 'MenuSection',
-      nestedGroupKey: 'menu',
-      id: 'product/projects:menu',
-      parentId: 'product/home:menu',
-      alwaysShowScrollHint: true,
-      items: [
-        {
-          type: 'SectionHeading',
-          text: 'Available Projects',
-          id: 'available-projects-heading'
-        },
-        // @TODO: generate these dynamically
-        {
-          type: 'RoutedLinkItem',
-          text: 'Atlascat',
-          id: 'atlascat',
-          to: '/projects/atlascat'
         }
       ]
     }

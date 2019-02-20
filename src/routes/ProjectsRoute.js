@@ -4,26 +4,32 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, GridColumn } from '@atlaskit/page';
 import { withNavigationViewController } from '@atlaskit/navigation-next';
-import projectsConfig from './projectsConfig';
+import { productHomeView } from '../config/viewConfigs';
 
 const Wrapper = styled.div`
   color: red;
 `;
 
 export default withNavigationViewController(function ProjectsRouteBase(props) {
-  const { projectID } = props.match.params;
-
   useEffect(() => {
     const { navigationViewController } = props;
-    navigationViewController.setView(projectsConfig[projectID].id);
+    navigationViewController.setView(productHomeView.id);
   }, []);
 
   return (
     <Wrapper>
       <Grid>
         <GridColumn>
-          <Link to="/">Home</Link>
-          {projectsConfig[projectID].component}
+          <Link to="/">Back to about</Link>
+          <h1>Projects</h1>
+          <ul>
+            <li>
+              <Link to="/projects/atlascat">atlascat</Link>
+            </li>
+            <li>
+              <Link to="/projects/broken-link-example">broken link</Link>
+            </li>
+          </ul>
         </GridColumn>
       </Grid>
     </Wrapper>

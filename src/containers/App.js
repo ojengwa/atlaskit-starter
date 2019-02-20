@@ -7,14 +7,13 @@ import {
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import { css, Global } from '@emotion/core';
 
-import { productHomeView, productProjectsView } from '../config/viewConfigs';
-import { atlascatHomeView, atlascatBacklogRoute } from '../projects/atlascat';
+import { productHomeView } from '../config/viewConfigs';
 import StarterGlobalNav from '../components/StarterGlobalNav';
 import LinkItem from '../components/LinkItem';
 
 /* eslint-disable-next-line */
 import cssReset from '@atlaskit/css-reset';
-import { AboutRoute, ProjectsRoute } from '../routes';
+import { AboutRoute, ProjectRoute, ProjectsRoute } from '../routes';
 
 const globalStyles = css`
   @font-face {
@@ -38,8 +37,6 @@ function App(props) {
   useEffect(() => {
     const { navigationViewController } = props;
     navigationViewController.addView(productHomeView);
-    navigationViewController.addView(atlascatHomeView);
-    navigationViewController.addView(productProjectsView);
   }, []);
 
   return (
@@ -50,11 +47,10 @@ function App(props) {
       // containerNavigation={() => null}
     >
       <Switch>
-        <Route exact path="/" component={AboutRoute} />
-        {/* <Route path="/projects/atlascat" component={atlascatBacklogRoute} /> */}
-        <Route path="/projects/:projectID" component={ProjectsRoute} />
-        <Route path="/projects" component={ProjectsRoute} />
+        <Route exact path="/projects" component={ProjectsRoute} />
+        <Route exact path="/projects/:projectID" component={ProjectRoute} />
         <Route path="/portfolio" component={() => <div>Portfolio</div>} />
+        <Route path="/" component={AboutRoute} />
       </Switch>
     </LayoutManagerWithViewController>
   );

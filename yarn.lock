@@ -247,6 +247,17 @@
     keycode "^2.1.7"
     prop-types "^15.5.10"
 
+"@atlaskit/empty-state@^3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@atlaskit/empty-state/-/empty-state-3.1.4.tgz#d8a0394e29443b82b5659de75c5fd080d6405e42"
+  integrity sha512-9UeILpGmlGxkz1/E0q4L2HnEE2T+vyJyYq8XF1BMN1eXILdijbONQfm1ynNm6IWBYpcBRZetHTw6RS46zxmgwQ==
+  dependencies:
+    "@atlaskit/button" "^10.1.1"
+    "@atlaskit/spinner" "^9.0.13"
+    "@atlaskit/theme" "^7.0.1"
+    "@babel/runtime" "^7.0.0"
+    babel-runtime "^6.26.0"
+
 "@atlaskit/field-base@^11.0.14":
   version "11.0.15"
   resolved "https://registry.yarnpkg.com/@atlaskit/field-base/-/field-base-11.0.15.tgz#bd06931a462bbe2ad4e9222f39b1734762f47342"

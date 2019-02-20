@@ -34,8 +34,8 @@ const atlascatHomeView = {
     {
       type: 'MenuSection',
       nestedGroupKey: 'menu',
-      id: 'atlastcat/home:menu',
-      parentId: null,
+      id: 'atlascat/home:menu',
+      parentId: 'product/home:menu',
       items: [
         {
           type: 'RoutedLinkItem',
@@ -48,7 +48,8 @@ const atlascatHomeView = {
           type: 'Item',
           before: BoardIcon,
           text: 'Active sprints',
-          id: 'active-sprints'
+          id: 'active-sprints',
+          to: '/projects/atlascat/active-sprints'
         },
         { type: 'Item', before: GraphLineIcon, text: 'Reports', id: 'reports' },
         { type: 'Separator', id: 'separator' },
@@ -57,14 +58,16 @@ const atlascatHomeView = {
           type: 'Item',
           before: IssueIcon,
           text: 'Issues and filters',
-          id: 'issues-and-filters'
+          id: 'issues-and-filters',
+          to: '/projects/atlascat/issues-and-filters'
         },
         { type: 'Item', before: PageIcon, text: 'Pages', id: 'pages' },
         {
           type: 'Item',
           before: ComponentIcon,
           text: 'Components',
-          id: 'components'
+          id: 'components',
+          to: '/projects/atlascat/components'
         }
       ]
     }

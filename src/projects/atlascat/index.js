@@ -1,3 +1,9 @@
-export { default as atlascatHomeView } from './atlascatHomeView';
-export { default as atlascatBacklogRoute } from './atlascatBacklogRoute';
-export { default as atlascatPageContent } from './atlascatPageContent';
+import viewConfig from './viewConfigs';
+import route from './atlascatBacklogRoute';
+import pageContent from './PageContent';
+
+export default {
+  viewConfig,
+  route,
+  pageContent
+};
