@@ -95,6 +95,18 @@
     "@atlaskit/analytics-next" "^3.0.6"
     "@atlaskit/theme" "^6.0.1"
 
+"@atlaskit/breadcrumbs@^6.0.15":
+  version "6.0.15"
+  resolved "https://registry.yarnpkg.com/@atlaskit/breadcrumbs/-/breadcrumbs-6.0.15.tgz#a17cdd362e023feca6bf25e0d3d8267c4210d4bd"
+  integrity sha512-Dn/DSS2ZsVhcRoENA3AQO0fj70kYRL2tnZKI9aSeKULhgS7vuMBT9xvsCOHnYuYRGu9x8kFRZbb66DZDUL3ZFQ==
+  dependencies:
+    "@atlaskit/analytics-next" "^3.1.2"
+    "@atlaskit/button" "^10.1.1"
+    "@atlaskit/theme" "^7.0.1"
+    "@atlaskit/tooltip" "^12.1.13"
+    "@babel/runtime" "^7.0.0"
+    babel-runtime "^6.26.0"
+
 "@atlaskit/button@^10.1.1", "@atlaskit/button@^10.1.2":
   version "10.1.2"
   resolved "https://registry.yarnpkg.com/@atlaskit/button/-/button-10.1.2.tgz#d00001843a65c9cbd4b40ddfa88dbe2f8664cc70"
@@ -613,7 +625,7 @@
     react-node-resolver "^1.0.1"
     react-transition-group "^2.2.1"
 
-"@atlaskit/tooltip@^12.1.15":
+"@atlaskit/tooltip@^12.1.13", "@atlaskit/tooltip@^12.1.15":
   version "12.1.17"
   resolved "https://registry.yarnpkg.com/@atlaskit/tooltip/-/tooltip-12.1.17.tgz#9fcccc78a4157d474d53bfcf390447b8a09c12e2"
   integrity sha512-silujiMAssZv331EWok5G9iYF3jug8i0KTAeeqepyNLkEYo0hR94P1W8OWpgUKwItOuHVEE335Ht8aCW5l89XA==

@@ -8,12 +8,16 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import { css, Global } from '@emotion/core';
 
 import { productHomeView } from '../config/viewConfigs';
-import StarterGlobalNav from '../components/StarterGlobalNav';
-import LinkItem from '../components/LinkItem';
+import { StarterGlobalNav, LinkItem } from '../components';
 
 /* eslint-disable-next-line */
 import cssReset from '@atlaskit/css-reset';
-import { AboutRoute, ProjectRoute, ProjectsRoute } from '../routes';
+import {
+  AboutRoute,
+  ProjectRoute,
+  ProjectsRoute,
+  PortfolioRoute
+} from '../routes';
 
 const globalStyles = css`
   @font-face {
@@ -49,7 +53,7 @@ function App(props) {
       <Switch>
         <Route exact path="/projects" component={ProjectsRoute} />
         <Route exact path="/projects/:projectID" component={ProjectRoute} />
-        <Route path="/portfolio" component={() => <div>Portfolio</div>} />
+        <Route path="/portfolio" component={PortfolioRoute} />
         <Route path="/" component={AboutRoute} />
       </Switch>
     </LayoutManagerWithViewController>

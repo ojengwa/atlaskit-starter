@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@atlaskit/avatar": "^14.1.8",
+    "@atlaskit/breadcrumbs": "^6.0.15",
     "@atlaskit/button": "^10.1.2",
     "@atlaskit/css-reset": "^3.0.5",
     "@atlaskit/dropdown-menu": "^6.1.26",

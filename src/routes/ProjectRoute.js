@@ -1,18 +1,15 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, GridColumn } from '@atlaskit/page';
 import { withNavigationViewController } from '@atlaskit/navigation-next';
 import EmptyState from '@atlaskit/empty-state';
 import Button from '@atlaskit/button';
 
+import { BreadCrumbsWithRouter, ContentWrapper } from '../components';
+
 import { productHomeView } from '../config/viewConfigs';
 import emptyStateImage from '../assets/images/empty-state.png';
-
 import projects from '../projects';
-
-const Wrapper = styled.div``;
 
 function ProjectRoute(props) {
   const { match } = props;
@@ -39,12 +36,14 @@ function ProjectRoute(props) {
             text. It's a convenient tool for mock-ups.`,
       imageUrl: emptyStateImage,
       primaryAction: (
-        <Button
-          appearance="link"
-          onClick={() => console.log('primary action clicked')}
-        >
-          Back to Projects
-        </Button>
+        <Link to="/projects">
+          <Button
+            appearance="link"
+            onClick={() => console.log('primary action clicked')}
+          >
+            Back Home
+          </Button>
+        </Link>
       ),
       secondaryAction: '',
       tertiaryAction: ''
@@ -55,6 +54,18 @@ function ProjectRoute(props) {
   function renderProjectPage() {
     return (
       <>
+        <BreadCrumbsWithRouter
+          paths={[
+            { href: '', text: 'Home' },
+            { href: '/projects', text: 'Projects' },
+            {
+              href: `/${projectID}`,
+              text: projectID,
+              disabled: true
+            }
+          ]}
+        />
+
         <h1>{projectID}</h1>
       </>
     );
@@ -67,18 +78,7 @@ function ProjectRoute(props) {
       return renderEmptyState();
     }
   }
-
-  return (
-    <Wrapper>
-      <Grid>
-        <GridColumn>
-          <Link to="/">Back to about</Link>
-          {render()}
-          <Link to="/projects">Back to Projects</Link>
-        </GridColumn>
-      </Grid>
-    </Wrapper>
-  );
+  return <ContentWrapper>{render()}</ContentWrapper>;
 }
 
 export default withNavigationViewController(ProjectRoute);

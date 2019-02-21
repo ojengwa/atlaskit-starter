@@ -1,17 +1,33 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { withNavigationViewController } from '@atlaskit/navigation-next';
+import { ContentWrapper } from '../components';
 
 import { productHomeView } from '../config/viewConfigs';
 
-export default withNavigationViewController(function AboutRouteBase(props) {
+function AboutRouteBase(props) {
   useEffect(() => {
     const { navigationViewController } = props;
     navigationViewController.setView(productHomeView.id);
   }, []);
   return (
-    <div styles={{ padding: 30 }}>
+    <ContentWrapper>
       <h1>About</h1>
-    </div>
+      <section style={{ marginBottom: '10px' }}>
+        <p>
+          This application is bootstrapped using{' '}
+          <a href="https://github.com/facebook/create-react-app">
+            create-react-app
+          </a>{' '}
+          and <a href="https://atlaskit.atlassian.com/">Atlaskit</a>.
+        </p>
+        <p>
+          This gives a working navigation component you can start hacking on,
+          see <code>/src/components/StarterNavigation.js</code>.
+        </p>
+      </section>
+    </ContentWrapper>
   );
-});
+}
+
+export default withNavigationViewController(AboutRouteBase);

@@ -2,7 +2,7 @@ import React from 'react';
 import FolderIcon from '@atlaskit/icon/glyph/folder';
 import PortfolioIcon from '@atlaskit/icon/glyph/portfolio';
 import DashboardIcon from '@atlaskit/icon/glyph/dashboard';
-import LinkItem from '../components/LinkItem';
+import { LinkItem } from '../components';
 
 function CustomProductWordmark() {
   return (
