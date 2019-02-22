@@ -8,7 +8,8 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import { css, Global } from '@emotion/core';
 
 import { productHomeView } from '../config/viewConfigs';
-import { StarterGlobalNav, LinkItem } from '../components';
+import { LinkItem } from '../components';
+import { StarterGlobalNav } from '../components/GlobalNavigation';
 
 /* eslint-disable-next-line */
 import cssReset from '@atlaskit/css-reset';
