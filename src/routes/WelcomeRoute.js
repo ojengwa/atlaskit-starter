@@ -5,14 +5,14 @@ import { ContentWrapper } from '../components';
 
 import { productHomeView } from '../config/viewConfigs';
 
-function AboutRouteBase(props) {
+function WelcomeRouteBase(props) {
   useEffect(() => {
     const { navigationViewController } = props;
     navigationViewController.setView(productHomeView.id);
   }, []);
   return (
     <ContentWrapper>
-      <h1>About</h1>
+      <h1>Welcome</h1>
       <section style={{ marginBottom: '10px' }}>
         <p>
           This application is bootstrapped using{' '}
@@ -30,4 +30,4 @@ function AboutRouteBase(props) {
   );
 }
 
-export default withNavigationViewController(AboutRouteBase);
+export default withNavigationViewController(WelcomeRouteBase);

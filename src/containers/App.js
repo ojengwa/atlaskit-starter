@@ -14,7 +14,7 @@ import { StarterGlobalNav } from '../components/GlobalNavigation';
 /* eslint-disable-next-line */
 import cssReset from '@atlaskit/css-reset';
 import {
-  AboutRoute,
+  WelcomeRoute,
   ProjectRoute,
   ProjectsRoute,
   PortfolioRoute
@@ -55,7 +55,7 @@ function App(props) {
         <Route exact path="/projects" component={ProjectsRoute} />
         <Route exact path="/projects/:projectID" component={ProjectRoute} />
         <Route path="/portfolio" component={PortfolioRoute} />
-        <Route path="/" component={AboutRoute} />
+        <Route path="/" component={WelcomeRoute} />
       </Switch>
     </LayoutManagerWithViewController>
   );

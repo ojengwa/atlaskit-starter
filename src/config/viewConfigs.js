@@ -47,10 +47,10 @@ export const productHomeView = {
       items: [
         {
           type: 'InlineComponent',
-          id: 'about',
+          id: 'welcome',
           component: LinkItem,
           before: DashboardIcon,
-          text: 'About',
+          text: 'Welcome',
           to: '/'
         },
         {
