@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import Drawer from '@atlaskit/drawer';
 import BitbucketBranchesIcon from '@atlaskit/icon/glyph/bitbucket/branches';
@@ -58,15 +57,15 @@ function CreateDrawer() {
       isOpen={isDrawerOpen}
       width="medium"
     >
-      {createItems.map(itemGroup => {
+      {createItems.map((itemGroup, i) => {
         return (
-          <section>
+          <section key={i}>
             {itemGroup.title && <h2>{itemGroup.title}</h2>}
             <ul>
-              {itemGroup.items.map(item => {
+              {itemGroup.items.map((item, i) => {
                 const [url, text, label, Icon] = item;
                 return (
-                  <li style={{ listStyleType: 'none' }}>
+                  <li key={i} style={{ listStyleType: 'none' }}>
                     <Icon label={label} />
                     <a href={url}>{text}</a>
                   </li>
