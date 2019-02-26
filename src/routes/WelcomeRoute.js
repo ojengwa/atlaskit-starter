@@ -4,6 +4,7 @@ import { withNavigationViewController } from '@atlaskit/navigation-next';
 import { ContentWrapper } from '../components';
 
 import { productHomeView } from '../config/viewConfigs';
+import WelcomeModal from '../components/WelcomeModal';
 
 function WelcomeRouteBase(props) {
   useEffect(() => {
@@ -26,6 +27,7 @@ function WelcomeRouteBase(props) {
           see <code>/src/components/StarterNavigation.js</code>.
         </p>
       </section>
+      <WelcomeModal />
     </ContentWrapper>
   );
 }

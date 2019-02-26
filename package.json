@@ -26,6 +26,7 @@
     "@atlaskit/inline-edit": "^7.1.8",
     "@atlaskit/modal-dialog": "^6.0.10",
     "@atlaskit/navigation": "^33.1.7",
+    "@atlaskit/onboarding": "^6.2.0",
     "@atlaskit/page": "^8.0.12",
     "@atlaskit/theme": "^6.0.1",
     "@emotion/core": "^10.0.7",
@@ -33,7 +34,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-router": "^3.2.0",
     "react-router-dom": "^4.2.2",
     "styled-components": "^3.2.6"
   },
