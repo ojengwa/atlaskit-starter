@@ -29,11 +29,9 @@ function ProjectRoute(props) {
 
   function renderEmptyState() {
     const props = {
-      header: 'I am the header',
-      description: `Lorem ipsum is a pseudo-Latin text used in web design,
-            typography, layout, and printing in place of English to emphasise
-            design elements over content. It's also called placeholder (or filler)
-            text. It's a convenient tool for mock-ups.`,
+      header: 'Empty state',
+      description: `A React component used for presenting various empty states
+       (no items, empty search, broken link, welcome screen etc.)`,
       imageUrl: emptyStateImage,
       primaryAction: (
         <Link to="/projects">
@@ -41,7 +39,7 @@ function ProjectRoute(props) {
             appearance="link"
             onClick={() => console.log('primary action clicked')}
           >
-            Back Home
+            Back to Projects
           </Button>
         </Link>
       ),
@@ -67,6 +65,8 @@ function ProjectRoute(props) {
         />
 
         <h1>{projectID}</h1>
+        {/* TODO: render specific project routes here */}
+        {/* <Route exact path="/:projectID" component={ProjectRoute} /> */}
       </>
     );
   }
