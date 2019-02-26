@@ -1,10 +1,9 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { withNavigationViewController } from '@atlaskit/navigation-next';
-import { ContentWrapper } from '../components';
 
+import { ContentWrapper, WelcomeModal } from '../components';
 import { productHomeView } from '../config/viewConfigs';
-import WelcomeModal from '../components/WelcomeModal';
 
 function WelcomeRouteBase(props) {
   useEffect(() => {

@@ -11,4 +11,6 @@ export { default as LinkItem } from './LinkItem';
 export { default as PageTitle } from './PageTitle';
 export { default as SearchDrawer } from './GlobalNavigation/SearchDrawer';
 export { default as SearchResults } from './GlobalNavigation/SearchResults';
+export { default as WelcomeModal } from './WelcomeModal';
+export { default as Onboarding } from './Onboarding';
 export { StarterGlobalNav } from './GlobalNavigation';

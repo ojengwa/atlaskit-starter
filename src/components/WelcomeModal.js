@@ -1,53 +1,51 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Modal } from '@atlaskit/onboarding';
-
+import { ModalLoadCtx } from '../containers/App';
 import welcomeImage from '../assets/images/welcome-modal.png';
 
 function WelcomeModal() {
-  const [modalState, setModalState] = useState({
-    isActive: false,
-    hasLoadedOnce: false
-  });
   const [redirect, setRedirect] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  const [count, setCounter] = useContext(ModalLoadCtx);
 
   function accept() {
-    setModalState({ isActive: false, hasLoadedOnce: true });
+    setIsActive(false);
     setRedirect(true);
   }
   function decline() {
-    setModalState({ isActive: false, hasLoadedOnce: true });
+    setIsActive(false);
   }
 
   useEffect(() => {
-    setModalState({ isActive: true });
+    setIsActive(true);
+    setCounter(count + 1);
   }, []);
-
-  const { isActive, hasLoadedOnce } = modalState;
 
   if (redirect) {
     return <Redirect to="/projects/atlascat" />;
   }
 
+  const modalShouldRender = isActive && count <= 1;
+
+  if (!modalShouldRender) return null;
+
   return (
-    isActive &&
-    !hasLoadedOnce && (
-      <Modal
-        actions={[
-          { onClick: accept, text: 'Check out the demo project' },
-          { onClick: decline, text: 'Not right now' }
-        ]}
-        heading="Get familiar with Atlaskit"
-        image={welcomeImage}
-        key="welcome"
-      >
-        <p>
-          Switch context, jump between project, and get back to work quickly
-          with our new look and feel.
-        </p>
-        <p>Take it for a spin and let us know what you think.</p>
-      </Modal>
-    )
+    <Modal
+      actions={[
+        { onClick: accept, text: 'Check out the demo project' },
+        { onClick: decline, text: 'Not right now' }
+      ]}
+      heading="Get familiar with Atlaskit"
+      image={welcomeImage}
+      key="welcome"
+    >
+      <p>
+        Switch context, jump between project, and get back to work quickly with
+        our new look and feel.
+      </p>
+      <p>Take it for a spin and let us know what you think.</p>
+    </Modal>
   );
 }
 

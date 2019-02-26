@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, createContext } from 'react';
 import {
   LayoutManagerWithViewController,
   NavigationProvider,
@@ -55,6 +55,7 @@ function App(props) {
         <Route exact path="/projects" component={ProjectsRoute} />
         <Route exact path="/projects/:projectID" component={ProjectRoute} />
         <Route path="/portfolio" component={PortfolioRoute} />
+
         <Route path="/" component={WelcomeRoute} />
       </Switch>
     </LayoutManagerWithViewController>
@@ -63,12 +64,17 @@ function App(props) {
 
 const AppWithNavigationViewController = withNavigationViewController(App);
 
+export const ModalLoadCtx = createContext([0, () => {}]);
+
 export default function() {
+  const [count, setCount] = useState(0);
   return (
     <BrowserRouter>
       <NavigationProvider>
         <Global styles={globalStyles} />
-        <AppWithNavigationViewController />
+        <ModalLoadCtx.Provider value={[count, setCount]}>
+          <AppWithNavigationViewController />
+        </ModalLoadCtx.Provider>
       </NavigationProvider>
     </BrowserRouter>
   );

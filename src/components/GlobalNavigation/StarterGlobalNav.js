@@ -34,12 +34,7 @@ function StarterGlobalNav() {
           productIcon={AtlaskitLogo}
           productHref="/"
           onProductClick={() => console.log('product clicked')}
-          onCreateClick={() =>
-            setIsDrawerOpen(isDrawerOpen => {
-              console.log(isDrawerOpen);
-              return !isDrawerOpen;
-            })
-          }
+          onCreateClick={() => setIsDrawerOpen(isDrawerOpen => !isDrawerOpen)}
           onSearchClick={() => console.log('search clicked')}
           onStarredClick={() => console.log('starred clicked')}
           onNotificationClick={() => console.log('notification clicked')}
@@ -49,6 +44,7 @@ function StarterGlobalNav() {
           onSettingsClick={() => console.log('settings clicked')}
           loginHref="#login"
         />
+        }
         <CreateDrawer />
       </>
     </DrawerCtx.Provider>
