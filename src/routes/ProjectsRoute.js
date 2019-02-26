@@ -14,12 +14,16 @@ export default withNavigationViewController(function ProjectsRouteBase(props) {
   return (
     <ContentWrapper>
       <h1>Projects</h1>
-      <ul>
+      <ul style={{ listStyleType: 'none' }}>
         <li>
-          <Link to="/projects/atlascat">atlascat</Link>
+          <h2>
+            <Link to="/projects/atlascat">atlascat</Link>
+          </h2>
         </li>
         <li>
-          <Link to="/projects/broken-link-example">broken link</Link>
+          <h2>
+            <Link to="/projects/broken-link-example">broken link</Link>
+          </h2>
         </li>
       </ul>
     </ContentWrapper>
