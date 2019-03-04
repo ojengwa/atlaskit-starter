@@ -52,10 +52,10 @@
     "@babel/runtime" "^7.0.0"
     prop-types "^15.5.10"
 
-"@atlaskit/atlassian-switcher@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@atlaskit/atlassian-switcher/-/atlassian-switcher-0.0.7.tgz#3959124ee2eec13edd180cab38c3bfce0e889397"
-  integrity sha512-f7RMamIP4EpKCdXSzXRdB38h3vipuK4iT+bATAKgemXn5Yf9C9HJVoaX+Hl8hYD3/TigxIzuZWNnUgM0DCWnOg==
+"@atlaskit/atlassian-switcher@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@atlaskit/atlassian-switcher/-/atlassian-switcher-0.0.9.tgz#da15f2efc92234d751ca4ceeb41515fc530a368a"
+  integrity sha512-N4hDuRReHOCvKyvuywoDV6CQ/fhUjUTtlrguWmQdeAA+nqRJulYp3jkSuuiD08nv9Xh9HZ0cdgON1SqNSLn2rQ==
   dependencies:
     "@atlaskit/analytics-gas-types" "^3.2.4"
     "@atlaskit/analytics-namespaced-context" "^2.2.0"
@@ -277,14 +277,14 @@
     tiny-invariant "^0.0.3"
     uuid "^3.1.0"
 
-"@atlaskit/global-navigation@^5.7.3":
-  version "5.7.3"
-  resolved "https://registry.yarnpkg.com/@atlaskit/global-navigation/-/global-navigation-5.7.3.tgz#9629d8486596047d26cc1111a9d3665dde4726f3"
-  integrity sha512-rp9ojxFTZsCGJMLJah612cblMc6hfVk98/zD9smyWoHZVe1gFS5Ho8Jjw+eQ2R/WeOMtZWxmLM4qtdVUW9uaMw==
+"@atlaskit/global-navigation@^5.7.5":
+  version "5.7.5"
+  resolved "https://registry.yarnpkg.com/@atlaskit/global-navigation/-/global-navigation-5.7.5.tgz#5450446bb2f1deaf074375582b6dfac9633a378c"
+  integrity sha512-Z100S6RIU820Q3Mh4nf1B44LCnD3amn6BFziG1ZtZfoXU31GwvF6WdXBg8CY9++BzMZWDn0h9Bq9ytzZiQqlBA==
   dependencies:
     "@atlaskit/analytics-namespaced-context" "^2.1.5"
     "@atlaskit/analytics-next" "^3.1.2"
-    "@atlaskit/atlassian-switcher" "^0.0.7"
+    "@atlaskit/atlassian-switcher" "^0.0.9"
     "@atlaskit/avatar" "^14.1.8"
     "@atlaskit/badge" "^9.2.2"
     "@atlaskit/blanket" "^7.0.12"
