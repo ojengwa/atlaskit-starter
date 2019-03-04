@@ -1,34 +1,22 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Modal } from '@atlaskit/onboarding';
-import { ModalLoadCtx } from '../containers/App';
 import welcomeImage from '../assets/images/welcome-modal.png';
 
-function WelcomeModal() {
+function WelcomeModal(props) {
   const [redirect, setRedirect] = useState(false);
-  const [isActive, setIsActive] = useState(false);
-  const [count, setCounter] = useContext(ModalLoadCtx);
 
   function accept() {
-    setIsActive(false);
+    props.show();
     setRedirect(true);
   }
   function decline() {
-    setIsActive(false);
+    props.hide();
   }
-
-  useEffect(() => {
-    setIsActive(true);
-    setCounter(count + 1);
-  }, []);
 
   if (redirect) {
     return <Redirect to="/projects/atlascat" />;
   }
-
-  const modalShouldRender = isActive && count <= 1;
-
-  if (!modalShouldRender) return null;
 
   return (
     <Modal
@@ -40,10 +28,7 @@ function WelcomeModal() {
       image={welcomeImage}
       key="welcome"
     >
-      <p>
-        Switch context, jump between project, and get back to work quickly with
-        our new look and feel.
-      </p>
+      <p>Get a feel for some of the key components that make up Atlaskit!</p>
       <p>Take it for a spin and let us know what you think.</p>
     </Modal>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext } from 'react';
+import React, { useEffect } from 'react';
 import {
   LayoutManagerWithViewController,
   NavigationProvider,
@@ -14,6 +14,7 @@ import { StarterGlobalNav } from '../components/GlobalNavigation';
 
 /* eslint-disable-next-line */
 import cssReset from '@atlaskit/css-reset';
+
 import {
   WelcomeRoute,
   ProjectRoute,
@@ -49,8 +50,6 @@ function App(props) {
     <LayoutManagerWithViewController
       customComponents={{ RoutedLinkItem: LinkItem }}
       globalNavigation={StarterGlobalNav}
-      // productNavigation={() => null}
-      // containerNavigation={() => null}
     >
       <Switch>
         <Route exact path="/projects" component={ProjectsRoute} />
@@ -65,19 +64,14 @@ function App(props) {
 
 const AppWithNavigationViewController = withNavigationViewController(App);
 
-export const ModalLoadCtx = createContext([0, () => {}]);
-
 export default function() {
-  const [count, setCount] = useState(0);
   return (
     <BrowserRouter>
       {/* @HACK: without ThemeProvider the build will break since some components still use the theme consumer  */}
       <ThemeProvider theme={{}}>
         <NavigationProvider>
           <Global styles={globalStyles} />
-          <ModalLoadCtx.Provider value={[count, setCount]}>
-            <AppWithNavigationViewController />
-          </ModalLoadCtx.Provider>
+          <AppWithNavigationViewController />
         </NavigationProvider>
       </ThemeProvider>
     </BrowserRouter>
