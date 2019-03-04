@@ -4,7 +4,7 @@ import {
   NavigationProvider,
   withNavigationViewController
 } from '@atlaskit/navigation-next';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import { Switch, HashRouter, Route } from 'react-router-dom';
 import { css, Global } from '@emotion/core';
 import { ThemeProvider } from 'styled-components';
 
@@ -66,7 +66,7 @@ const AppWithNavigationViewController = withNavigationViewController(App);
 
 export default function() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       {/* @HACK: without ThemeProvider the build will break since some components still use the theme consumer  */}
       <ThemeProvider theme={{}}>
         <NavigationProvider>
@@ -74,6 +74,6 @@ export default function() {
           <AppWithNavigationViewController />
         </NavigationProvider>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
